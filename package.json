@@ -1,8 +1,8 @@
 {
   "name": "tree-sitter-godot-resource",
-  "version": "0.7.0",
+  "version": "1.1.0",
   "description": "Grammar for the Godot game engine's text resource format.",
-  "repository": "https://github.com/prestonknopp/tree-sitter-godot-resource",
+  "repository": "https://github.com/minhtrungvn6868/tree-sitter-godot-resource",
   "license": "MIT",
   "author": {
     "name": "Preston Knopp"
@@ -34,7 +34,7 @@
   "devDependencies": {
     "prebuildify": "^6.0.1",
     "prettier": "^3.5.3",
-    "tree-sitter-cli": "^0.24.7"
+    "tree-sitter-cli": "^0.21.0"
   },
   "peerDependencies": {
     "tree-sitter": "^0.21.1"
@@ -47,7 +47,7 @@
   "scripts": {
     "install": "node-gyp-build",
     "prebuild": "prebuildify --strip -t electron@34.5.5 -t electron@35.3.0 -t electron@36.2.0 -t v20.19.1 -t v22.15.0 -t v23.11.0 -t v24.0.1",
-    "prestart": "tree-sitter build --wasm",
+    "prestart": "tree-sitter build-wasm",
     "start": "tree-sitter playground",
     "versions": "node --version && npm --version && tree-sitter --version",
     "test": "tree-sitter test && node --test bindings/node/*_test.js",
